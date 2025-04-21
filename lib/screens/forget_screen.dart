@@ -1,3 +1,4 @@
+import 'package:assignment8a/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 
 class ForgetScreen extends StatelessWidget {
@@ -9,16 +10,16 @@ class ForgetScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text("Forget Password",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold
-        ),
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+          ),
         ),
         centerTitle: false,
       ),
       body: Padding(
-          padding: const EdgeInsets.all(20),
-      child: Column(
+        padding: const EdgeInsets.all(20),
+        child: Column(
           children: [
             SizedBox(height: 200,),
             Container(
@@ -38,6 +39,12 @@ class ForgetScreen extends StatelessWidget {
             ),
             SizedBox(height: 20,),
             ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=> SendOtp()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green,
@@ -46,11 +53,12 @@ class ForgetScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  Text("Send OTP"),
                 ],
               ),
             ),
-        ],
-      ),
+          ],
+        ),
       ),
     );
   }
