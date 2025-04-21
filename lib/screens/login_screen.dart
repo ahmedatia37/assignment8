@@ -57,7 +57,6 @@ class LoginScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    print("Text pressed!");
                     Navigator.push(
                       context,
                     MaterialPageRoute(builder: (context)=> ForgetScreen())

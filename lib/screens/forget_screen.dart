@@ -38,7 +38,6 @@ class ForgetScreen extends StatelessWidget {
             ),
             SizedBox(height: 20,),
             ElevatedButton(
-              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green,
@@ -47,7 +46,6 @@ class ForgetScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Sent OTP"),
                 ],
               ),
             ),
